@@ -1,0 +1,54 @@
+<form [formGroup]="formulario" (ngSubmit)="crear()" >
+    <ul>
+        <li>
+            <label for="nombre" style="padding-right: 12%" >Nombres</label>
+            <br>
+            <input formControlName="nombre" type="text" required >
+        </li>
+        <li>
+            <label for="Apellidos" style="padding-right: 11%">Apellidos</label>
+            <br>
+            <input formControlName= "apellidos" type="text" required>
+        </li>
+
+        <li>
+            <label >Seleccionar el Genero</label><br>
+            <input type="radio"  value="male">Hombre.
+            <input type="radio"  value="female">Mujer.
+            <input type="radio"  value="other">Otro.
+        </li>
+         <br>
+        <li>
+            <label >Pais</label><br>
+            <select formControlName="pais">
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Chile" selected>Chile</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Panama">Panama</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Peru</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+             </select>
+        </li>
+        <br>
+        <li>
+            <label for="ciudad">Ciudad</label><br>
+            <input formControlName="ciudad" type="text" id="ciudad">
+        </li>
+        <br>
+        <li>
+            <button type="submit" id="enviar">Enviar </button>
+            <button type="reset" id="borrar">Borrar </button>
+        </li>
+    </ul>
+</form>
